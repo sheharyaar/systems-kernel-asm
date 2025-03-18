@@ -1,4 +1,4 @@
-I created this repository to learn assembly quickly in context of systems programming to get the foundational skills to build a toy hypervisor in near future.
+I have created this repository to learn assembly quickly in context of systems programming to get the foundational skills to build a toy hypervisor in near future.
 
 - [ ] Practice context saving and restoration -- saving all general-purpose registers on the stack, modifying their contents and restoring their values
 - [ ] Create a scheduler in assembly that saves the context (registers, stack pointer, etc.) of the currently running routine and switches to the other.
