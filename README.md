@@ -1,3 +1,5 @@
+Reference Book: Introduction to 64 Bit Assembly Programming for Linux by Ray Stefarth
+
 I have created this repository to learn assembly quickly in context of systems programming to get the foundational skills to build a toy hypervisor in near future.
 
 - [ ] Practice context saving and restoration -- saving all general-purpose registers on the stack, modifying their contents and restoring their values
