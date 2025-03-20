@@ -1,4 +1,5 @@
-Reference Book: Introduction to 64 Bit Assembly Programming for Linux by Ray Stefarth
+Reference Book: Learn to Program with Assembly: Foundational Learning for New Programmers by Jonathan Bartlett
+Why? - It has AT&T Syntax (used by Linux Kernel) and introduces AMD64 (64-Bit Assembly).
 
 I have created this repository to learn assembly quickly in context of systems programming to get the foundational skills to build a toy hypervisor in near future.
 
