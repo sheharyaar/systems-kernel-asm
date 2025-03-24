@@ -10,7 +10,15 @@ SOURCES = $(wildcard *.s)
 # Convert .s files to .o files
 OBJECTS = $(SOURCES:.s=.o)
 # Convert .s files to binaries (no extension)
-BINARIES = $(SOURCES:.s=)
+BINARIES = 00-exit \
+	   04-valuesize \
+	   05-exponentloop \
+	   05-exponent \
+	   06-largestvalue-rcx \
+	   06-largestvalue \
+	   07-tallest \
+	   07-browncount \
+	   07-lowercasecount
 
 all: $(BINARIES)
 
@@ -21,6 +29,12 @@ all: $(BINARIES)
 # Rule to link .o to binary
 %: %.o
 	$(LD) $(LDFLAGS) -o $@ $<
+
+07-tallest: 07-tallest.o 07-persondata.o
+	$(LD) $(LDFLAGS) -o $@ $^
+
+07-browncount: 07-browncount.o 07-persondata.o
+	$(LD) $(LDFLAGS) -o $@ $^
 
 clean:
 	rm -f $(OBJECTS) $(BINARIES)
