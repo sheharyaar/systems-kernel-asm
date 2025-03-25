@@ -18,7 +18,9 @@ BINARIES = 00-exit \
 	   06-largestvalue \
 	   07-tallest \
 	   07-browncount \
-	   07-lowercasecount
+	   07-lowercasecount \
+	   08-addsigned \
+	   08-countones
 
 all: $(BINARIES)
 
