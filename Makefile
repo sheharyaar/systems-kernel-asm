@@ -20,7 +20,9 @@ BINARIES = 00-exit \
 	   07-browncount \
 	   07-lowercasecount \
 	   08-addsigned \
-	   08-countones
+	   08-countones \
+	   10-wait5 \
+	   10-simpleoutput
 
 all: $(BINARIES)
 
