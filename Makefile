@@ -22,7 +22,10 @@ BINARIES = 00-exit \
 	   08-addsigned \
 	   08-countones \
 	   10-wait5 \
-	   10-simpleoutput
+	   10-simpleoutput \
+	   11-factorialstack \
+	   11-runexponent \
+	   11-runexponent-c
 
 all: $(BINARIES)
 
@@ -39,6 +42,12 @@ all: $(BINARIES)
 
 07-browncount: 07-browncount.o 07-persondata.o
 	$(LD) $(LDFLAGS) -o $@ $^
+
+11-runexponent: 11-exponentfunc.o 11-runexponent.o
+	$(LD) $(LDFLAGS) -o $@ $^
+
+11-runexponent-c: 11-exponentfunc.o 11-runexponent-c.c
+	gcc -o $@ $^
 
 clean:
 	rm -f $(OBJECTS) $(BINARIES)
