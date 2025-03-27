@@ -25,13 +25,21 @@ BINARIES = 00-exit \
 	   10-simpleoutput \
 	   11-factorialstack \
 	   11-runexponent \
-	   11-runexponent-c
+	   11-runexponent-c \
+	   12-abscall \
+	   12-absmain \
+	   12-filewrite
+
+SIDE_EFFECTS = myfile.txt
 
 all: $(BINARIES)
 
 # Rule to assemble .s to .o
 %.o: %.s
 	$(AS) $(ASMFLAGS) -o $@ $<
+
+%: %.gcc.s
+	gcc -static -o $@ $<
 
 # Rule to link .o to binary
 %: %.o
@@ -49,7 +57,13 @@ all: $(BINARIES)
 11-runexponent-c: 11-exponentfunc.o 11-runexponent-c.c
 	gcc -o $@ $^
 
+12-abscall: 12-abscall.o
+	ld $^ -static -lc -o $@
+
+#12-absmain: 12-absmain.s
+#	gcc $^ -static -o $@
+
 clean:
-	rm -f $(OBJECTS) $(BINARIES)
+	rm -f $(OBJECTS) $(BINARIES) $(SIDE_EFFECTS)
 
 .PHONY: all clean
