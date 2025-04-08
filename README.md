@@ -1,11 +1,17 @@
-Reference Book: **Learn to Program with Assembly: Foundational Learning for New Programmers** by **Jonathan Bartlett** \
-**Why?** - It has *AT&T Syntax* (used by Linux Kernel) and introduces AMD64 (64-Bit Assembly).
+## Reference Book
 
-- The folder `asm-basics/` contains basic programs to learn 64-bit assembly. Run `make` to build all the programs.
+**Learn to Program with Assembly: Foundational Learning for New Programmers** by **Jonathan Bartlett**
+- It has *AT&T Syntax* (used by Linux Kernel) and introduces AMD64 (64-Bit Assembly).
 
-> The `.s` files use `_start` label to run the assembly programs. The `.gcc.s` files use `main` to run the programs. I have changed the extension to make it easier for the Makefile to perform compilation. The `.gcc.s` programs use `gcc`, the `.s` labelled programs use `as`.
 
 I have created this repository to learn assembly quickly in context of systems programming to get the foundational skills to build a toy hypervisor in near future.
+
+## Folder Structure
+
+- `asm-basics/` contains basic byte-sized programs to learn 64-bit assembly.
+- `systems-programming/` contains byte-sized programs to learn systems programming using AMD manual.
+
+### TODOs
 
 - [ ] Complete Dynamic Linking Chapter
 - [ ] Practice adapting Programming Language features like Refcounting, OOPs, Garbage Collection, etc. from **Part III**.
