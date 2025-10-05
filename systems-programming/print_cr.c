@@ -1,5 +1,6 @@
 #include <linux/module.h>
 
+// import the assembly functions here
 extern uint64_t print_cr0(void);
 extern uint64_t print_cr2(void);
 extern uint64_t print_cr3(void);

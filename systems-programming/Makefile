@@ -1,7 +1,5 @@
 SOURCES = $(wildcard *.c)
-# Convert .s files to .o files
 OBJECTS = $(SOURCES:.c=.o)
-# Convert .s files to binaries (no extension)
 
 obj-m += print_cr_regs.o
 print_cr_regs-objs := print_cr.o print_cr_asm.o

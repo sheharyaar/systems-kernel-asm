@@ -17,7 +17,7 @@ _start:
 loop:
 	movq (elements-8)(, %rcx, 8), %rax	# use general addressing, since base and idx are registers
 						# we cannot perform arithment (-8), but since `value` is a fixed
-						# number, we can perform arithmet (elements-8)
+						# number, we can perform arithmetic (elements-8)
 	cmpq %rdi, %rax
 	jle skip_store
 	

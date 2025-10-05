@@ -8,8 +8,10 @@ elements: .quad 5, 20, 33, 80, 52, 10, 1
 
 _start:
 	movq count, %rcx	# no. of elements, better to store in a register, since we have many access
-	movq $elements, %rbx	# address of the first variable (again we store it, to have faster access)
 				# notice the use of $ to use the memory location address as integer
+				# This is the direct addressing mode
+	movq $elements, %rbx	# address of the first variable (again we store it, to have faster access)
+							# This is immediate mode
 	movq $0, %rdi		# need a 0 value in case we don't have any elements
 
 	cmpq $0, %rcx

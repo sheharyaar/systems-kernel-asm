@@ -3,6 +3,8 @@
 
 _start:
 	movw $0b0000000100000010, %bx	# initialise 16-bit bx register
+									# the upper 8 bits represent value 2, and lower 8 bits represent value 1
+									# the two halfs are added and stored in the results, and returns a value 3 on exit
 	addb %bh, %bl			# add the higher 8bits (1 byte) to the lower byte
 	#movb $0, %bh			# clear the higher byte
 	xorb %bh, %bh			# clear the higher byte
@@ -15,9 +17,9 @@ _start:
 Q: Why not use `rdi` directly ?
 
 A: `rdi` cannot access individual bytes directly, so we needed a register
-(as mmentioned by the book). But it seems that we can access individual can be acessed
+(as mentioned by the book). But it seems that we can access individual can be acessed
 using `%dil` but only in 64-bit mode (REX prefix), a CPU running in 32-bit cannot do that. Also, 
-you cannot use t`%dil` together with `dh`, so the addb operation won't be possible.
+you cannot use `%dil` together with `dh`, so the addb operation won't be possible.
 
 You can try this by uncommenting the below program
 
