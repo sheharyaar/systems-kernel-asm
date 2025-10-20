@@ -30,3 +30,4 @@ The folder contains the following assembly programs that demonstrate various con
 | **Library Calls** | [`12-abscall.s`](12-abscall.s) | Calls the `abs(3)` function from the C standard library, linked manually. |
 |  | [`12-absmain.gcc.s`](12-absmain.gcc.s) | Calls `abs(3)` using `main` as entry point; GCC handles C library linking. |
 |  | [`12-filewrite.gcc.s`](12-filewrite.gcc.s) | Opens a file and writes a string using `fopen`, `fprintf`, and `fclose`. Uses `main` as entry point. |
+| **Dynamic Linking** | [`15-link-static.gcc.s`](15-link-static.gcc.s) | Statically links the C standard library and calls `printf` to print a string. |

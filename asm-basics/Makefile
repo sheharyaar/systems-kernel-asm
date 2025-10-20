@@ -28,7 +28,8 @@ BINARIES = 00-exit \
 	   11-runexponent-c \
 	   12-abscall \
 	   12-absmain \
-	   12-filewrite
+	   12-filewrite \
+	   15-link-static
 
 SIDE_EFFECTS = myfile.txt
 
