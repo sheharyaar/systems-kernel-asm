@@ -1,4 +1,4 @@
-> The notes on assembly is available on my website: [https://www.sheharyaar.in/notes/assembly/](sheharyaar.in/notes/assembly/). The notes on system-v-abi and system programming is still a work in progress.
+> The notes on assembly is available on my website: [sheharyaar.in/notes/assembly/](https://www.sheharyaar.in/notes/assembly/). The notes on system-v-abi and system programming is still a work in progress.
 
 ## Reference Book
 
